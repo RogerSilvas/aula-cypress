@@ -1,3 +1,5 @@
+import userData from '../fixtures/userData.json'
+
 describe('Orange HRM Tests', () => {
   
   const selectorsList = {
@@ -7,26 +9,8 @@ describe('Orange HRM Tests', () => {
     sectionTitleTopBar: '.oxd-topbar-header-breadcrumb > .oxd-text',
     dashboardGrid: '.orangehrm-dashboard-grid',
     wrongCredentialAlert: '.oxd-alert'
-
   }
   
-  const userData = {
-    userSuccess:{
-      username: 'Admin',
-      password: 'admin123'
-    },
-    userFail:{
-      username: 'test',
-      password: 'admin123'
-    },
-    passwordFail:{
-      username: 'Admin',
-      password: 'admin12'
-    }
-  }
-
-
-
 
   it('Login sucess', () => {
     cy.visit('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login')
